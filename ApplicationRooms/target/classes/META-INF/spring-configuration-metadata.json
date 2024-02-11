@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "login",
+      "type": "com.example.configuration.loginInformationConfig",
+      "sourceType": "com.example.configuration.loginInformationConfig"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

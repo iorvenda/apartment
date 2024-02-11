@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spy Glass</title>
+    <style>
+        #body{
+        background-color:lightgray;
+        }
+
+
+
+    </style>
+</head>
+<div>
+    <body id="body">
+
+        <div id="customer_form">
+            <form th:action="@{/save}" method="post" th:object="${apartment}">
+               <input type="text" class="inputs_to_right" placeholder="Apartment Name" name="apartment"><br>
+               <input type="text" class="inputs_to_right" placeholder="Address" name="apartment_address"><br>
+                <select class="inputs_to_right">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select><br>
+                <textarea cols="15" rows="10" class="inputs_to_right" placeholder="Please add comments here"></textarea><br>
+                <input type="submit" class="inputs_to_right" value="Submit">
+            </form>
+        </div>
+
+
+
+    </body>
+</div>
+</html>

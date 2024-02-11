@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Click the button to get your coordinates.</p>
+
+<button id ="click" onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+var y= document.getElementById("click");
+function getLocation() {
+setInterval(function(){
+y.click();
+},3300);
+
+alert(navigator.geolocation.getCurrentPosition(showPosition));
+  if (navigator.geolocation) {
+
+    //navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</body>
+</html>
